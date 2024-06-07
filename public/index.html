@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="user-profile">
+                <img src="ellipse.png" alt="User Profile Picture" class="profile-pic">
+                <div class="user-info">
+                    <h3 id="username">UserName!</h3>
+                    <!-- Add an id to the logout icon -->
+                    <img src="shape.png" alt="Logout Icon" class="logout-icon" id="logout-icon">
+                </div>
+            </div>
+            <!-- Add more sidebar items here if needed -->
+        </div>
+        <div class="header">
+            <div class="content-header">
+                <div class="greeting">
+                    <h1>HELLO, <span id="username-header">UserName!</span></h1>
+                    <h4>How are you today?</h4>
+                </div>
+                <div class="section weather">
+                    <h2>How's the weather today?</h2>
+                    <input type="text" placeholder="Enter city..." id="city-input">
+                    <button id="fetch-weather-button">Enter</button>
+                    <div id="weather-data">
+                        <p>City: <span id="city"></span></p>
+                        <p>Country: <span id="country"></span></p>
+                        <p>Temperature: <span id="temperature"></span>°F</p>
+                        <p>Humidity: <span id="humidity"></span>%</p>
+                        <p>Wind Speed: <span id="windSpeed"></span> m/s</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section news">
+                <h2>This week's headlines!</h2>
+                <input type="text" placeholder="Enter news category..." id="news-category-input">
+                <button id="fetch-news-button">Enter</button>
+                <div id="news"></div>
+            </div>
+            <div class="section quotes">
+                <h2>Want an inspiring quote for today?</h2>
+                <input type="text" placeholder="Enter quote topic..." id="quote-topic-input">
+                <button id="fetch-quote-button">Enter</button>
+                <div id="quote-data">Loading quote...</div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+    <script>
+        // Add event listener to the logout icon
+        document.getElementById('logout-icon').addEventListener('click', () => {
+            // Navigate to the login.html page
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+
+</html>
